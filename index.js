@@ -29,9 +29,6 @@ let element_5 = element_1 + element_2
 
 console.log(`let me show you the value ${element_5}`)
 
-//Use all those variable in render function
-ReactDOM.render(element_2
-, document.getElementById("root"))
 
 
 function Navbar() {
@@ -55,3 +52,15 @@ function MainComponent() {
         </h6>
     )
 }
+
+
+//This is getting custom component to work in React
+function CustomComponent() {
+    return (element_2)
+}
+
+//Use all those variable in render function
+//And wrap in angular brackets
+ReactDOM.render(
+    <CustomComponent />
+, document.getElementById("root"))

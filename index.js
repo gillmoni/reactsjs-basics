@@ -44,7 +44,6 @@ function Navbar() {
     )
 }
 
-
 function MainComponent() {
     return (
         <h6 className="custom-element" id="custom-element">
@@ -56,11 +55,21 @@ function MainComponent() {
 
 //This is getting custom component to work in React
 function CustomComponent() {
-    return (element_2)
+    return (
+        <div>
+            <h1>Reasons to learn react.</h1>
+                <ol>
+                    <li>It's a popular library, so I'll be 
+                    able to fit in with the cool kids!</li>
+                    <li>I'm more likely to get a job as a developer
+                    if I know React</li>
+                </ol>
+        </div>
+    )
 }
 
 //Use all those variable in render function
 //And wrap in angular brackets
 ReactDOM.render(
     <CustomComponent />
-, document.getElementById("root"))
+    , document.getElementById("root"))

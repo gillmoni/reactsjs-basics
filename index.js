@@ -8,17 +8,15 @@ const element_1 = <h1 className="header">This is JSX, syntax mix and passing via
 
 //Declare multiple but wrap in parenthesis
 const element_2 = (
-                    <h1 className="header">Hello, React! from index.js
+                    <h1 className="header">Tapri
                         <div id="ul-list">
-                            <h6>
-                                <ul>
-                                    <li>First element</li>
-                                    <li>Second element</li>
-                                    <li>Third element</li>
-                                </ul>
-                            </h6>
-                            <div><MainComponent/></div>
+                            <ul>
+                                <li>Menu</li>
+                                <li>Our Story</li>
+                                <li>Contact</li>
+                            </ul>
                             <div><Navbar /></div>
+                            <div><MainComponent/></div>
                         </div>
                     </h1> 
                     )
@@ -52,8 +50,8 @@ function Navbar() {
 
 function MainComponent() {
     return (
-        <h5 className="custom-element" id="custom-element">
-        <p>Just adding one custom element, nothing else.</p>
-        </h5>
+        <h6 className="custom-element" id="custom-element">
+            <p>Just adding one custom element, nothing else.</p>
+        </h6>
     )
 }

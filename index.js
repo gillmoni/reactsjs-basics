@@ -5,30 +5,19 @@ console.log(h1)
 
 function Navbar() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <a className="navbar-brand" href="#">Navbar</a>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-            </button>
-
- 
-        </nav>
+        <ul className="nav-items">
+            <li>Pricing</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
     )
 }
 
-function MainComponent() {
-    return (
-        <h6 className="custom-element" id="custom-element">
-            <p>Just adding one custom element, nothing else.</p>
-        </h6>
-    )
-}
 
 /**
 Mini Challenge:
-Move the `header` element from Page into 
-its own component called "Header"
-Do the same for Footer and for Points
+- Just add a small NavBar on top to right side, use Flexbox
+- Change the image styling to happen in CSS insread of inline.
 */
 
 //This is getting custom component to work in React
@@ -69,8 +58,9 @@ function Footer() {
 function Header() {
     return(
         <header>
-            <nav>
-                <img src="./react-logo.png" width="40px"></img>
+            <nav class="nav">
+                <img src="./react-logo.png" className="nav-logo"></img>
+                <Navbar />
             </nav>
         </header>
     )

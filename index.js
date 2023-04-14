@@ -3,34 +3,6 @@ h1.textContent = "Hello World"
 h1.className = "header"
 console.log(h1)
 
-//Simple JSX syntax
-const element_1 = <h1 className="header">This is JSX, syntax mix and passing via variable</h1>
-
-//Declare multiple but wrap in parenthesis
-const element_2 = (
-                    <h1 className="header">Tapri
-                        <div id="ul-list">
-                            <ul>
-                                <li>Menu</li>
-                                <li>Our Story</li>
-                                <li>Contact</li>
-                            </ul>
-                            <div><Navbar /></div>
-                            <div><MainComponent/></div>
-                        </div>
-                    </h1> 
-                    )
-
-//passing variable
-let element_4 = "New Stuff"
-
-//passing object
-let element_5 = element_1 + element_2
-
-console.log(`let me show you the value ${element_5}`)
-
-
-
 function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -53,42 +25,54 @@ function MainComponent() {
 }
 
 /**
-Challenge: 
-
-Part 2: 
-- Add a `header` element with a nested `nav` element. Inside the `nav`,
-  include a `img` element with the image of the React logo inside
-  (src="./react-logo.png") and make sure to set the width to something
-  more manageable so it doesn't take up the whole screen
-- Add an `h1` with some text describing the page. (E.g. "Reasons
-  I'm excited to learn React"). Place it above the ordered list.
-- Add a `footer` after the list that says: 
-    "© 20xx <last name here> development. All rights reserved."
- */
+Mini Challenge:
+Move the `header` element from Page into 
+its own component called "Header"
+Do the same for Footer and for Points
+*/
 
 //This is getting custom component to work in React
 function Page() {
     return (
         <div>
-            <header>
-                <nav>
-                    <img src="./react-logo.png" width="40px"></img>
-                </nav>
-
-            </header>
-            <h1>Reasons to learn react.</h1>
-                <ol>
-                    <li>It's a popular library, so I'll be 
-                    able to fit in with the cool kids!</li>
-                    <li>I'm more likely to get a job as a developer
-                    if I know React</li>
-                </ol>
-                <footer>
-                    <small><small>
-                        © 2023 YaYa development. All rights reserved.
-                    </small></small>
-                </footer>
+            <Header />
+            <Points />
+            <Footer />
         </div>
+    )
+}
+
+function Points () {
+    return (
+        <div>
+            <h1>Reasons to learn react.</h1>
+            <ol>
+                <li>It's a popular library, so I'll be 
+                able to fit in with the cool kids!</li>
+                <li>I'm more likely to get a job as a developer
+                if I know React</li>
+            </ol>
+        </div>
+    )
+}
+
+function Footer() {
+    return (
+        <footer>
+            <small><small>
+                © 2023 YaYa development. All rights reserved.
+            </small></small>
+        </footer>
+    )
+}
+
+function Header() {
+    return(
+        <header>
+            <nav>
+                <img src="./react-logo.png" width="40px"></img>
+            </nav>
+        </header>
     )
 }
 
